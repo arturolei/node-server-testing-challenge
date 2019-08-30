@@ -18,7 +18,7 @@ async function update(id, changes) {
 }
 
 function remove(id) {
-  return null;
+  return db('hobbits').where({ id }).del();
 }
 
 function getAll() {
@@ -26,5 +26,5 @@ function getAll() {
 }
 
 function findById(id) {
-  return null;
+  return db('hobbits').where({id});
 }
